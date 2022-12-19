@@ -1,0 +1,310 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #000000;
+    font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+
+}
+
+/*contains every menu item hidden and showing*/
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 52px;
+    background-color: #1d2226;
+    color:rgb(202, 201, 201);
+    display: flex; /*magic*/
+    justify-content: center;
+    border-bottom: #333436 solid 1px;
+}
+
+#logo-div {
+    font-size: 36px;
+    color: rgb(202, 201, 201);
+    width: 8%;
+    max-width: 50px;
+/*    background-color: navajowhite;*/
+    text-align: center;
+    display: inline-block;
+}
+#logo-div:hover {
+    color: #fff;
+}
+#menu-list {
+/*    background-color: bisque;*/
+    width: 90%;
+    max-width: 600px;
+    display: inline-block;
+}
+
+#menu-list ul {
+    list-style-type: none;
+    display: inline-flex;
+    margin-left: -45px;
+}
+
+.menu-item {
+    margin-top: -2px;
+    font-size: 20px;
+    padding: 0 15px;
+}
+.menu-item:hover {
+    color: #fff;
+}
+/*vertical line before Work button*/
+.vl {
+    border-left: 1px solid #333436;
+    margin-top: -16px;
+
+}
+
+#circular-portrait {
+    border-radius: 50%;
+    width: 24px;
+    height: auto;
+    padding: 2px;
+}
+
+#nav-search {
+    width: 0%; /*this value changes when the viewport goes bigger*/
+    height: auto;
+    /*padding: 8px;*/
+}
+
+#search {
+display: none;
+}
+
+.nav-btn {
+ display: none;   
+}
+/*we could develop a class style for each of this 
+sections to avoid code stacking at least for
+user-section adn show-more*/
+.main-section {
+   stroke: none;
+}
+
+#user-section {
+    border-radius: 10px;
+    background-color: #1d2226;
+    /*using ps of bg to display as much as intended*/
+    background-image: url(https://images.unsplash.com/photo-1573080172019-72e10d006c2f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Ymx1ZSUyMHdhdmVzfGVufDB8fDB8fA%3D%3D&w=1000&q=80);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0 -242px; /*could this be the fix?*/
+    color: white;
+    margin-top: 64px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 16px 6px 16px;
+    width: 90%;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+#profile-pic {
+    border-radius: 50%;
+    border: 1px solid #000000;
+    width: 64px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#user-name, #user-job-title {
+    text-align: center;
+    font-size: smaller;
+}
+
+#user-name {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+#user-job-title {
+    margin-top: -8px;
+    font-size: 12px;
+    font-weight: lighter;
+    color: rgb(184, 184, 184)
+}
+
+/*SHOW MORE SECTION*/
+#show-more-btn {
+    border-radius: 8px;
+    display: block;
+    background-color: #000000;
+    color: #fff;
+    width: 90%;
+    margin-top: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 6px;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+#show-more-btn:hover {
+    background-color: #1d2226;
+}
+/*START A POST SECTION*/
+#search-section {
+    background-color: #1d2226;
+    width: 90%;
+    height: 118px;
+    margin-top: 9px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px;
+    max-width: 600px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+#search-bar-pic {
+    width: 52px;
+    border-radius: 60%;
+    margin-left: 8px;
+}
+
+#search-bar-post { /*we need these to stick to the pic
+    like an inline block*/
+    border-radius: 40px;
+    border: 1px solid rgb(131, 131, 131) ;
+    width: 84%;
+    height: 24px;
+    padding: 12px;
+    background-color: inherit;
+    font-weight: bold;
+    color: white;
+}
+
+#search-bar-post:hover {
+    background-color: #686b6d;
+}
+
+#search-bar-btns {
+    color: #fff;
+    display: flex;
+    list-style-type: none;
+    margin-left: -40px; /*we need a fix to this for better practice*/
+    justify-content: space-between;
+    margin-top: 5px;
+}
+#search-bar-btns i { font-size: 18px;}
+
+#search-bar-btns li {
+    margin: 0 12px;
+    padding: 12px 0;
+}
+
+.search-btn-icon {
+    margin-right: 12px;
+}
+
+#search-bar-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-btn-link {
+    text-decoration: none;
+    color: inherit;
+
+}
+
+.search-btn-link:hover {
+    background-color: #686b6d;
+}
+
+#photo-btn {
+    color: cyan;
+}
+
+#video-btn {
+    color: rgb(0, 170, 0);
+}
+
+#audio-event-btn {
+    color: orange;
+}
+
+#write-article-btn {
+    color: rgb(255, 71, 71);
+}
+
+#promo-text {
+    font-size: 12px;
+    display: block;
+    margin-top: -6px;
+    text-align: center;
+    width: 100px;
+}
+
+.menu-item a {
+    color: goldenrod;
+}
+.menu-item a:hover {
+    color: rgb(253, 209, 96);
+}
+
+#general-feed article {
+    color: white;
+    background-color: #1d2226;
+    width: 90%;
+    height: auto;
+    margin-top: 9px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px;
+    max-width: 600px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+#post-section-btns {
+    color: #fff;
+    display: flex;
+    list-style-type: none;
+    margin-left: -40px; /*we need a fix to this for better practice*/
+    justify-content: space-between;
+    margin-top: 5px;
+}
+/*USERS POSTS*/
+.three-dot-btn {
+    text-decoration: none; /* WHY not working??*/
+    font-size: 24px;
+    display: block;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    align-self:center;
+}
+
+.three-dot-btn:hover {
+    background-color: #686b6d;
+    border-radius: 50%;
+}
+
+.user-name-post {
+    font-weight: bold;
+}
+
+.profile-pic-post {
+    width: 52px;
+}
+
+.user-job-title {
+    color:#afb9be;
+    margin-top: -15px;
+    
+}
+
+.name-tile {
+    margin-top: -70px;
+    margin-left: 60px;
+    width: 90%;
+}

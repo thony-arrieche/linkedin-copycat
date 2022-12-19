@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/bf50564c9b.js" crossorigin="anonymous"></script>
+        <title>Feed | LinkedIn</title>
+    </head>
+    <body>
+        <header>
+        <nav id="navbar">
+            <div id="logo-div"><i class="fa-brands fa-linkedin" class="logo"></i></div>
+            <div id="menu-list">
+                <ul> <!-- need small icons for each btn-->
+                    <li class="menu-item">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <p class="nav-btn">Search</p>
+                    </li>
+                    <li class="menu-item">
+                        <i class="fa-solid fa-house-chimney"></i>
+                        <p class="nav-btn">Home</p>
+                    </li>
+                    <li class="menu-item">
+                        <i class="fa-sharp fa-solid fa-users"></i>
+        
+                        <p class="nav-btn">My Network</p>                    </li>
+                    <li class="menu-item">
+                        <i class="fa-solid fa-briefcase"></i>
+                        <p class="nav-btn">Jobs</p>
+                    </li>
+                    <li class="menu-item">
+                        <i class="fa-solid fa-comment-dots"></i>
+                        <p class="nav-btn">Messaging</p>
+                    </li>
+                    <li class="menu-item">
+                        <i class="fa-solid fa-bell"></i>
+                        <p class="nav-btn">Notifications</p>
+                    </li>
+                    <li class="menu-item">
+                        <div id="user-photo"><img id="circular-portrait" src="user-picture.jpg" alt="profile photo" id="profile-pic"></div> 
+                        <button id="dropdown-me" class="nav-btn"><p>Me ▼</p></button>
+                    </li>
+                    <div class="vl"></div>
+                    <li class="menu-item">
+                        <i class="fa-solid fa-table-cells"></i>
+                        <button class="nav-btn">Work ▼</button> <!--dropdown menu-->
+                    </li><!-- has a dropdown menu-->
+                    <li class="menu-item">
+                        <a href="#">
+                            <p id="promo-text" class="link">Get hired faster. Try Premium free.</p>
+                        </a>
+                    </li>
+                </ul>
+            </div> <!-- end of menu-list div-->
+            </nav>
+        </header>
+    <main>
+        <section id="user-section">
+            <article>
+                <!--<img src="#" alt="user banner" id="banner">-->
+                <img src="user-picture.jpg" alt="profile picture" id="profile-pic">
+                <h2 id="user-name">Thony Arrieche</h2>
+                <h3 id="user-job-title">Customer Service Expert | E-commerce Support</h3>
+            </article>
+        </section>
+        <!--SHOW MORE btn-->
+        <section id="show-more">
+            <button id="show-more-btn">Show more <i class="fa-solid fa-angle-down"></i></button>
+        </section>
+        <section id="search-section">
+            <article>
+                <div id="search-bar-container">
+                    <img src="user-picture.jpg" alt="profile picture" id="search-bar-pic">
+                    <input id="search-bar-post" type="text" placeholder="Start a post">
+                </div>
+                <ul id="search-bar-btns">
+                    <a href="#" class="search-btn-link">
+                        <li>
+                            <i class="fa-solid fa-image search-btn-icon" id="photo-btn"></i>Photo
+                        </li>
+                    </a>
+                    <a href="#" class="search-btn-link">
+                        <li>
+                            <i class="fa-brands fa-youtube search-btn-icon" id="video-btn"></i>Video
+                        </li>
+                    </a>
+                    <a href="#" class="search-btn-link">
+                        <li>
+                            <i class="fa-solid fa-calendar-week search-btn-icon" id="audio-event-btn"></i>Audio event
+                        </li>
+                    </a>
+                    <a href="#" class="search-btn-link">
+                        <li>
+                            <i class="fa-solid fa-newspaper search-btn-icon" id="write-article-btn"></i>Write article
+                        </li>
+                    </a>
+                </ul>
+            </article>
+        </section>
+
+        <section id="general-feed">
+            <article> <!--temp ID-->
+                <img src="profile-pic-post.png" alt="network-post" class="profile-pic-post">
+                <div class="name-tile">
+                    <p class="user-name-post">Network user name</p>
+                    <p class="user-job-title">Network user job title</p>
+                    <a href="#" class="three-dot-btn">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </a>
+                </div>
+                <p>
+                    The post itself
+                    Lorem, ipsum dolor sit amet consectetur 
+                    adipisicing elit. Odit minima fugiat, 
+                    cupiditate recusandae quisquam porro vel 
+                    quia, repellendus ipsam saepe delectus 
+                    nulla. Dolor minima eius deleniti facilis. 
+                    Iusto, sed consequuntur.
+                </p>
+                <p>small icon impressions</p><p>comments tally</p>
+                <hr>
+                <ul id="post-section-btns">
+                    <li>
+                        Like
+                    </li>
+                    <li>
+                        Comment
+                    </li>
+                    <li>
+                        Repost
+                    </li>
+                    <li>
+                        Send
+                    </li>
+                </ul>
+            </article>
+            <article>
+                <img src="#" alt="network-post"><p>Network user name</p>
+                <p>Network user job title</p>
+                <button>three dot btn</button>
+                <p>
+                    The post itself
+                    Lorem, ipsum dolor sit amet consectetur 
+                    adipisicing elit. Odit minima fugiat, 
+                    cupiditate recusandae quisquam porro vel 
+                    quia, repellendus ipsam saepe delectus 
+                    nulla. Dolor minima eius deleniti facilis. 
+                    Iusto, sed consequuntur.
+                </p>
+                <p>small icon impressions</p><p>comments tally</p>
+                <hr>
+                <ul id="post-section-btns">
+                    <li>
+                        Like
+                    </li>
+                    <li>
+                        Comment
+                    </li>
+                    <li>
+                        Repost
+                    </li>
+                    <li>
+                        Send
+                    </li>
+                </ul>
+            </article>
+            <article>
+                <img src="#" alt="network-post"><p>Network user name</p>
+                <p>Network user job title</p>
+                <button>three dot btn</button>
+                <p>
+                    The post itself
+                    Lorem, ipsum dolor sit amet consectetur 
+                    adipisicing elit. Odit minima fugiat, 
+                    cupiditate recusandae quisquam porro vel 
+                    quia, repellendus ipsam saepe delectus 
+                    nulla. Dolor minima eius deleniti facilis. 
+                    Iusto, sed consequuntur.
+                </p>
+                <p>small icon impressions</p><p>comments tally</p>
+                <hr>
+                <ul id="post-section-btns">
+                    <li>
+                        Like
+                    </li>
+                    <li>
+                        Comment
+                    </li>
+                    <li>
+                        Repost
+                    </li>
+                    <li>
+                        Send
+                    </li>
+                </ul>
+            </article>
+        </section> <!-- this has /'infinite'/ scroll-->
+        <aside id="right-section">
+            <div id="add-group-section"></div>
+            <div id="ad-section"></div>
+        </aside>
+        <footer></footer>
+    </main>
+
+    </body>
+</html>
