@@ -56,7 +56,6 @@ body {
 .vl {
     border-left: 1px solid #333436;
     margin-top: -16px;
-
 }
 
 #circular-portrait {
@@ -168,17 +167,17 @@ user-section adn show-more*/
     border-radius: 60%;
     margin-left: 8px;
 }
-
-#search-bar-post { /*we need these to stick to the pic
-    like an inline block*/
+/*PICTURE AND INPUT SEARCH STICKS TOGETHER INLINE*/
+#search-bar-post {
     border-radius: 40px;
     border: 1px solid rgb(131, 131, 131) ;
     width: 84%;
+    max-width: 725px;
     height: 24px;
     padding: 12px;
     background-color: inherit;
     font-weight: bold;
-    color: white;
+    margin-left: 8px;
 }
 
 #search-bar-post:hover {
@@ -212,27 +211,27 @@ user-section adn show-more*/
 .search-btn-link {
     text-decoration: none;
     color: inherit;
-
 }
 
 .search-btn-link:hover {
     background-color: #686b6d;
+    border-radius: 2px;
 }
 
 #photo-btn {
-    color: cyan;
+    color: #70b5f9;
 }
 
 #video-btn {
-    color: rgb(0, 170, 0);
+    color: #7fc15e;
 }
 
 #audio-event-btn {
-    color: orange;
+    color: #e7a33e;
 }
 
 #write-article-btn {
-    color: rgb(255, 71, 71);
+    color: #f5987e;
 }
 
 #promo-text {
@@ -241,6 +240,7 @@ user-section adn show-more*/
     margin-top: -6px;
     text-align: center;
     width: 100px;
+    line-height:18px;
 }
 
 .menu-item a {
@@ -250,38 +250,58 @@ user-section adn show-more*/
     color: rgb(253, 209, 96);
 }
 
+/*USERS POSTS*/
 #general-feed article {
     color: white;
     background-color: #1d2226;
     width: 90%;
     height: auto;
-    margin-top: 9px;
+    margin-top: 12px;
     margin-left: auto;
     margin-right: auto;
-    padding: 12px;
+    padding: 14px;/*THIS MUST BE OPTIONAL FOR SOME POSTS OR ADS*/
     max-width: 600px;
     box-sizing: border-box;
     font-size: 14px;
     border-radius: 10px;
 }
 
-#post-section-btns {
-    color: #fff;
-    display: flex;
-    list-style-type: none;
-    margin-left: -40px; /*we need a fix to this for better practice*/
-    justify-content: space-between;
-    margin-top: 5px;
+.user-post-container {
+    width: 100%;
+    display: flex; /*MAGIC!*/
 }
-/*USERS POSTS*/
+
+.user-name-post {
+    font-weight: bold;
+    font-size: 15px; /*START transition to dynamic sizes*/
+}
+
+.profile-pic-post {
+    width: 52px;
+}
+
+.user-job-title, .post-edit-time {
+    color:#afb9be;
+    margin-top: -15px;
+    font-size: 12px;
+    
+}
+
+.name-tile {
+    margin-top: -20px;
+    margin-left: 6px;
+    width: 85%;
+}
+
 .three-dot-btn {
-    text-decoration: none; /* WHY not working??*/
-    font-size: 24px;
-    display: block;
-    width: 35px;
-    height: 35px;
+    font-size: 22px;
+    width: 36px;
+    height: 34px;
     text-align: center;
-    align-self:center;
+    margin-top: -8px;
+}
+.three-dot-btn a {
+    color: #fff;
 }
 
 .three-dot-btn:hover {
@@ -289,22 +309,52 @@ user-section adn show-more*/
     border-radius: 50%;
 }
 
-.user-name-post {
+.post-btn-container {
+    color: #fff;
+    display: flex;
+    list-style-type: none;
+    position: relative;
+    justify-content: space-evenly;
+/*    background-color: cadetblue;*/
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: -6px;
+}
+
+.post-btn { /*IT SHOULD BE CONTAINED WHITIN THE POST*/
+    border-radius: 2px;
+    width: 25%;
+    text-align: center;
+    padding: 6px 8px;
+}
+
+.post-btn i {
+    font-size: 20px;
+    margin-right: 4px;
+}
+
+.btn-inner-text {
+    font-size: 13px;
+    display: inline-block;
     font-weight: bold;
+    padding: 0;
 }
 
-.profile-pic-post {
-    width: 52px;
+.post-btn:hover {
+    background-color: #5a5c5e;
 }
 
-.user-job-title {
-    color:#afb9be;
-    margin-top: -15px;
-    
+.horizontal-row {
+    border: 1px solid #333436;
+    width: 98%;
+    height: auto;
 }
 
-.name-tile {
-    margin-top: -70px;
-    margin-left: 60px;
-    width: 90%;
+.img-post-container {
+    align-items: center;
+}
+
+.post-img {
+    width: 100%;
+    height: auto;
 }

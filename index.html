@@ -8,11 +8,12 @@
         <title>Feed | LinkedIn</title>
     </head>
     <body>
+        <!-- CONTAINS THE NAV BAR-->
         <header>
         <nav id="navbar">
             <div id="logo-div"><i class="fa-brands fa-linkedin" class="logo"></i></div>
             <div id="menu-list">
-                <ul> <!-- need small icons for each btn-->
+                <ul>
                     <li class="menu-item">
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <p class="nav-btn">Search</p>
@@ -38,7 +39,7 @@
                         <p class="nav-btn">Notifications</p>
                     </li>
                     <li class="menu-item">
-                        <div id="user-photo"><img id="circular-portrait" src="user-picture.jpg" alt="profile photo" id="profile-pic"></div> 
+                        <div id="user-photo"><img id="circular-portrait" src="img/user-picture.jpg" alt="profile photo" id="profile-pic"></div> 
                         <button id="dropdown-me" class="nav-btn"><p>Me ▼</p></button>
                     </li>
                     <div class="vl"></div>
@@ -59,7 +60,7 @@
         <section id="user-section">
             <article>
                 <!--<img src="#" alt="user banner" id="banner">-->
-                <img src="user-picture.jpg" alt="profile picture" id="profile-pic">
+                <img src="img/user-picture.jpg" alt="profile picture" id="profile-pic">
                 <h2 id="user-name">Thony Arrieche</h2>
                 <h3 id="user-job-title">Customer Service Expert | E-commerce Support</h3>
             </article>
@@ -71,7 +72,7 @@
         <section id="search-section">
             <article>
                 <div id="search-bar-container">
-                    <img src="user-picture.jpg" alt="profile picture" id="search-bar-pic">
+                    <img src="/img/user-picture.jpg" alt="profile picture" id="search-bar-pic">
                     <input id="search-bar-post" type="text" placeholder="Start a post">
                 </div>
                 <ul id="search-bar-btns">
@@ -100,14 +101,65 @@
         </section>
 
         <section id="general-feed">
+            <article>
+                <div class="user-post-container">
+                    <div class="profile-pic-container"><img src="/img/profile-pic-1.png" alt="network-post" class="profile-pic-post"></div>
+                    <div class="name-tile">
+                        <p class="user-name-post">Network user name</p>
+                        <p class="user-job-title">Network user job title</p>
+                        <p class="post-edit-time">2h ago</p>
+                    </div>
+                    <div class="three-dot-btn"><a href="#"><i class="fa-solid fa-ellipsis"></i></a></div>
+                    </div>
+                </div> <!-- END OF USER POST CONT-->
+                    <p>
+                        The post itself
+                        Lorem, ipsum dolor sit amet consectetur 
+                        adipisicing elit. Odit minima fugiat, 
+                        cupiditate recusandae quisquam porro vel 
+                        quia, repellendus ipsam saepe delectus 
+                        nulla. Dolor minima eius deleniti facilis. 
+                        Iusto, sed consequuntur.
+                    </p>
+                    <p>
+                        The post itself
+                        Lorem, ipsum dolor sit amet consectetur 
+                        adipisicing elit. Odit minima fugiat, 
+                        cupiditate recusandae quisquam porro vel 
+                        quia, repellendus ipsam saepe delectus 
+                        nulla. Dolor minima eius deleniti facilis. 
+                        Iusto, sed consequuntur.
+                    </p>
+                    <p>small icon impressions</p><p>comments tally</p>
+                    <hr class="horizontal-row">
+                    <div class="post-btn-container">
+                        <div class="post-btn">
+                            <i class="fa-regular fa-thumbs-up"></i>
+                            <p class="btn-inner-text">Like</p>
+                        </div>
+                        <div class="post-btn">
+                            <i class="fa-regular fa-comment-dots"></i>
+                            <p class="btn-inner-text">Comment</p>
+                        </div>
+                        <div class="post-btn">
+                            <i class="fa-solid fa-retweet"></i>
+                            <p class="btn-inner-text">Repost</p>
+                        </div>
+                        <div class="post-btn">
+                            <i class="fa-regular fa-paper-plane"></i>
+                            <p class="btn-inner-text">Send</p>
+                        </div>
+                    </div>
+            </article>
             <article> <!--temp ID-->
-                <img src="profile-pic-post.png" alt="network-post" class="profile-pic-post">
+                <div class="user-post-container">
+                <div class="profile-pic-container"><img src="img/profile-pic-2.png" alt="network-post" class="profile-pic-post"></div>
                 <div class="name-tile">
                     <p class="user-name-post">Network user name</p>
                     <p class="user-job-title">Network user job title</p>
-                    <a href="#" class="three-dot-btn">
-                        <i class="fa-solid fa-ellipsis"></i>
-                    </a>
+                    <p class="post-edit-time">2h ago</p>
+                </div>
+                <div class="three-dot-btn"><a href="#"><i class="fa-solid fa-ellipsis"></i></a></div>
                 </div>
                 <p>
                     The post itself
@@ -118,82 +170,183 @@
                     nulla. Dolor minima eius deleniti facilis. 
                     Iusto, sed consequuntur.
                 </p>
-                <p>small icon impressions</p><p>comments tally</p>
-                <hr>
-                <ul id="post-section-btns">
-                    <li>
-                        Like
-                    </li>
-                    <li>
-                        Comment
-                    </li>
-                    <li>
-                        Repost
-                    </li>
-                    <li>
-                        Send
-                    </li>
-                </ul>
-            </article>
-            <article>
-                <img src="#" alt="network-post"><p>Network user name</p>
-                <p>Network user job title</p>
-                <button>three dot btn</button>
+                <div class="img-post-container">
+                    <img src="img/post-img-1.jpeg" class="post-img" alt="post imag reference">
+                </div>
                 <p>
                     The post itself
                     Lorem, ipsum dolor sit amet consectetur 
-                    adipisicing elit. Odit minima fugiat, 
-                    cupiditate recusandae quisquam porro vel 
-                    quia, repellendus ipsam saepe delectus 
-                    nulla. Dolor minima eius deleniti facilis. 
-                    Iusto, sed consequuntur.
+                    adipisicing elit. Odit minima fugiat
                 </p>
-                <p>small icon impressions</p><p>comments tally</p>
-                <hr>
-                <ul id="post-section-btns">
-                    <li>
-                        Like
-                    </li>
-                    <li>
-                        Comment
-                    </li>
-                    <li>
-                        Repost
-                    </li>
-                    <li>
-                        Send
-                    </li>
-                </ul>
+                <p>small icon impressions♥</p><p>123 comments tally</p>
+                <hr class="horizontal-row">
+                <div class="post-btn-container">
+                    <div class="post-btn">
+                        <i class="fa-regular fa-thumbs-up"></i>
+                        <p class="btn-inner-text">Like</p>
+                    </div>
+                    <div class="post-btn">
+                        <i class="fa-regular fa-comment-dots"></i>
+                        <p class="btn-inner-text">Comment</p>
+                    </div>
+                    <div class="post-btn">
+                        <i class="fa-solid fa-retweet"></i>
+                        <p class="btn-inner-text">Repost</p>
+                    </div>
+                    <div class="post-btn">
+                        <i class="fa-regular fa-paper-plane"></i>
+                        <p class="btn-inner-text">Send</p>
+                    </div>
+                </div>
+            </article><article>
+                <div class="user-post-container">
+                    <div class="profile-pic-container"><img src="/img/profile-pic-1.png" alt="network-post" class="profile-pic-post"></div>
+                    <div class="name-tile">
+                        <p class="user-name-post">Network user name</p>
+                        <p class="user-job-title">Network user job title</p>
+                        <p class="post-edit-time">2h ago</p>
+                    </div>
+                    <div class="three-dot-btn"><a href="#"><i class="fa-solid fa-ellipsis"></i></a></div>
+                    </div>
+                </div> <!-- END OF USER POST CONTAINER-->
+                    <p>
+                        The post itself
+                        Lorem, ipsum dolor sit amet consectetur 
+                        adipisicing elit. Odit minima fugiat, 
+                        cupiditate recusandae quisquam porro vel 
+                        quia, repellendus ipsam saepe delectus 
+                        nulla. Dolor minima eius deleniti facilis. 
+                        Iusto, sed consequuntur.
+                    </p>
+                    <p>
+                        The post itself
+                        Lorem, ipsum dolor sit amet consectetur 
+                        adipisicing elit. Odit minima fugiat, 
+                        cupiditate recusandae quisquam porro vel 
+                        quia, repellendus ipsam saepe delectus 
+                        nulla. Dolor minima eius deleniti facilis. 
+                        Iusto, sed consequuntur.
+                    </p>
+                    <p>small icon impressions</p><p>comments tally</p>
+                    <hr class="horizontal-row">
+                    <div class="post-btn-container">
+                        <div class="post-btn">
+                            <i class="fa-regular fa-thumbs-up"></i>
+                            <p class="btn-inner-text">Like</p>
+                        </div>
+                        <div class="post-btn">
+                            <i class="fa-regular fa-comment-dots"></i>
+                            <p class="btn-inner-text">Comment</p>
+                        </div>
+                        <div class="post-btn">
+                            <i class="fa-solid fa-retweet"></i>
+                            <p class="btn-inner-text">Repost</p>
+                        </div>
+                        <div class="post-btn">
+                            <i class="fa-regular fa-paper-plane"></i>
+                            <p class="btn-inner-text">Send</p>
+                        </div>
+                    </div>
             </article>
             <article>
-                <img src="#" alt="network-post"><p>Network user name</p>
-                <p>Network user job title</p>
-                <button>three dot btn</button>
-                <p>
-                    The post itself
-                    Lorem, ipsum dolor sit amet consectetur 
-                    adipisicing elit. Odit minima fugiat, 
-                    cupiditate recusandae quisquam porro vel 
-                    quia, repellendus ipsam saepe delectus 
-                    nulla. Dolor minima eius deleniti facilis. 
-                    Iusto, sed consequuntur.
-                </p>
-                <p>small icon impressions</p><p>comments tally</p>
-                <hr>
-                <ul id="post-section-btns">
-                    <li>
-                        Like
-                    </li>
-                    <li>
-                        Comment
-                    </li>
-                    <li>
-                        Repost
-                    </li>
-                    <li>
-                        Send
-                    </li>
-                </ul>
+                <div class="user-post-container">
+                    <div class="profile-pic-container"><img src="/img/profile-pic-3.png" alt="network-post" class="profile-pic-post"></div>
+                    <div class="name-tile">
+                        <p class="user-name-post">Network user name</p>
+                        <p class="user-job-title">Network user job title</p>
+                        <p class="post-edit-time">2h ago</p>
+                    </div>
+                    <div class="three-dot-btn"><a href="#"><i class="fa-solid fa-ellipsis"></i></a></div>
+                    </div>
+                </div> <!-- END OF USER POST CONT-->
+                    <p>
+                        The post itself
+                        Lorem, ipsum dolor sit amet consectetur 
+                        adipisicing elit. Odit minima fugiat, 
+                        cupiditate recusandae quisquam porro vel 
+                        quia, repellendus ipsam saepe delectus 
+                        nulla. Dolor minima eius deleniti facilis. 
+                        Iusto, sed consequuntur.
+                    </p>
+                    <p>
+                        The post itself
+                        Lorem, ipsum dolor sit amet consectetur 
+                        adipisicing elit. Odit minima fugiat, 
+                        cupiditate recusandae quisquam porro vel 
+                        quia, repellendus ipsam saepe delectus 
+                        nulla. Dolor minima eius deleniti facilis. 
+                        Iusto, sed consequuntur.
+                    </p>
+                    <p>small icon impressions</p><p>comments tally</p>
+                    <hr class="horizontal-row">
+                    <div class="post-btn-container">
+                        <div class="post-btn">
+                            <i class="fa-regular fa-thumbs-up"></i>
+                            <p class="btn-inner-text">Like</p>
+                        </div>
+                        <div class="post-btn">
+                            <i class="fa-regular fa-comment-dots"></i>
+                            <p class="btn-inner-text">Comment</p>
+                        </div>
+                        <div class="post-btn">
+                            <i class="fa-solid fa-retweet"></i>
+                            <p class="btn-inner-text">Repost</p>
+                        </div>
+                        <div class="post-btn">
+                            <i class="fa-regular fa-paper-plane"></i>
+                            <p class="btn-inner-text">Send</p>
+                        </div>
+                    </div>
+            </article>
+            <article>
+                <div class="user-post-container">
+                    <div class="profile-pic-container"><img src="/img/profile-pic-4.jpg" alt="network-post" class="profile-pic-post"></div>
+                    <div class="name-tile">
+                        <p class="user-name-post">Network user name</p>
+                        <p class="user-job-title">Network user job title</p>
+                        <p class="post-edit-time">2h ago</p>
+                    </div>
+                    <div class="three-dot-btn"><a href="#"><i class="fa-solid fa-ellipsis"></i></a></div>
+                    </div>
+                </div> <!-- END OF USER POST CONT-->
+                    <p>
+                        The post itself
+                        Lorem, ipsum dolor sit amet consectetur 
+                        adipisicing elit. Odit minima fugiat, 
+                        cupiditate recusandae quisquam porro vel 
+                        quia, repellendus ipsam saepe delectus 
+                        nulla. Dolor minima eius deleniti facilis. 
+                        Iusto, sed consequuntur.
+                    </p>
+                    <p>
+                        The post itself
+                        Lorem, ipsum dolor sit amet consectetur 
+                        adipisicing elit. Odit minima fugiat, 
+                        cupiditate recusandae quisquam porro vel 
+                        quia, repellendus ipsam saepe delectus 
+                        nulla. Dolor minima eius deleniti facilis. 
+                        Iusto, sed consequuntur.
+                    </p>
+                    <p>small icon impressions</p><p>comments tally</p>
+                    <hr class="horizontal-row">
+                    <div class="post-btn-container">
+                        <div class="post-btn">
+                            <i class="fa-regular fa-thumbs-up"></i>
+                            <p class="btn-inner-text">Like</p>
+                        </div>
+                        <div class="post-btn">
+                            <i class="fa-regular fa-comment-dots"></i>
+                            <p class="btn-inner-text">Comment</p>
+                        </div>
+                        <div class="post-btn">
+                            <i class="fa-solid fa-retweet"></i>
+                            <p class="btn-inner-text">Repost</p>
+                        </div>
+                        <div class="post-btn">
+                            <i class="fa-regular fa-paper-plane"></i>
+                            <p class="btn-inner-text">Send</p>
+                        </div>
+                    </div>
             </article>
         </section> <!-- this has /'infinite'/ scroll-->
         <aside id="right-section">
