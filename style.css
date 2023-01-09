@@ -2,8 +2,8 @@ body {
     padding: 0;
     margin: 0;
     background-color: #000000;
-    font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
-
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
 }
 
 /*contains every menu item hidden and showing*/
@@ -16,17 +16,19 @@ body {
     color:rgb(202, 201, 201);
     display: flex; /*magic*/
     justify-content: center;
+    align-items: center;
     border-bottom: #333436 solid 1px;
 }
 
 #logo-div {
-    font-size: 36px;
+    font-size: 38px;
     color: rgb(202, 201, 201);
     width: 8%;
     max-width: 50px;
 /*    background-color: navajowhite;*/
     text-align: center;
-    display: inline-block;
+    display: inline-flex;
+    margin-left: -20px;
 }
 #logo-div:hover {
     color: #fff;
@@ -35,38 +37,38 @@ body {
 /*    background-color: bisque;*/
     width: 90%;
     max-width: 600px;
-    display: inline-block;
+    display: inline-flex;
 }
 
 #menu-list ul {
     list-style-type: none;
     display: inline-flex;
-    margin-left: -45px;
+    margin-left: -46px;
 }
 
 .menu-item {
-    margin-top: -2px;
+    margin-top: 24px;
     font-size: 20px;
-    padding: 0 15px;
+    padding: 0 16px;
+    cursor: pointer;
 }
 .menu-item:hover {
     color: #fff;
 }
-/*vertical line before Work button*/
+/*vertical line before WORK button*/
 .vl {
     border-left: 1px solid #333436;
-    margin-top: -16px;
+    height: 56px;
 }
 
 #circular-portrait {
     border-radius: 50%;
     width: 24px;
     height: auto;
-    padding: 2px;
 }
 
 #nav-search {
-    width: 0%; /*this value changes when the viewport goes bigger*/
+    width: 0%; /*HIDDEN FOR VIEWPORT reasons*/
     height: auto;
     /*padding: 8px;*/
 }
@@ -148,6 +150,19 @@ user-section adn show-more*/
     background-color: #1d2226;
 }
 /*START A POST SECTION*/
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #fff;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #fff;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #fff;
+  }
+
 #search-section {
     background-color: #1d2226;
     width: 90%;
@@ -171,13 +186,14 @@ user-section adn show-more*/
 #search-bar-post {
     border-radius: 40px;
     border: 1px solid rgb(131, 131, 131) ;
-    width: 84%;
+    width: 82%;
     max-width: 725px;
-    height: 24px;
+    height: 22px;
     padding: 12px;
     background-color: inherit;
     font-weight: bold;
     margin-left: 8px;
+    cursor: pointer;
 }
 
 #search-bar-post:hover {
@@ -238,6 +254,7 @@ user-section adn show-more*/
     font-size: 12px;
     display: block;
     margin-top: -6px;
+    margin-left: -16px;
     text-align: center;
     width: 100px;
     line-height:18px;
@@ -259,7 +276,7 @@ user-section adn show-more*/
     margin-top: 12px;
     margin-left: auto;
     margin-right: auto;
-    padding: 14px;/*THIS MUST BE OPTIONAL FOR SOME POSTS OR ADS*/
+    padding: 18px;/*THIS MUST BE OPTIONAL FOR SOME POSTS OR ADS*/
     max-width: 600px;
     box-sizing: border-box;
     font-size: 14px;
@@ -273,32 +290,35 @@ user-section adn show-more*/
 
 .user-name-post {
     font-weight: bold;
-    font-size: 15px; /*START transition to dynamic sizes*/
+    font-size: 16px; /*START transition to dynamic sizes*/
 }
 
 .profile-pic-post {
     width: 52px;
+    margin-top: 4px;
 }
 
 .user-job-title, .post-edit-time {
     color:#afb9be;
-    margin-top: -15px;
+    margin-top: -12px;
     font-size: 12px;
     
 }
 
 .name-tile {
-    margin-top: -20px;
+    margin-top: -10px;
     margin-left: 6px;
     width: 85%;
 }
 
 .three-dot-btn {
-    font-size: 22px;
+    font-size: 20px;
     width: 36px;
     height: 34px;
-    text-align: center;
-    margin-top: -8px;
+    margin-top: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .three-dot-btn a {
     color: #fff;
@@ -341,7 +361,7 @@ user-section adn show-more*/
 }
 
 .post-btn:hover {
-    background-color: #5a5c5e;
+    background-color: #4e5052;
 }
 
 .horizontal-row {
@@ -357,4 +377,41 @@ user-section adn show-more*/
 .post-img {
     width: 100%;
     height: auto;
+}
+
+.sort-btn-section {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+    height: 30px;
+/*    background-color: #70b5f9;*/
+    font-size: 12px;
+    color: #686b6d;
+    margin-bottom: -6px;
+}
+.sort-btn-section p {
+    margin-top: 10px;
+    display: inline-flex;
+    margin-left: 16px;
+}
+
+.sort-btn-row {
+    display: inline-block;
+    width: 85%;
+    height: 0.1px;
+    max-width: 590px;
+    margin-left: 0px;
+    background-color: #1d2226;
+    border: none;
+}
+
+.sort-btn-section button {
+    background-color: transparent;
+    color: #686b6d;
+    text-align: center;
+    text-justify: auto;
+    padding: 2px;
+    margin-top: -3px;
+    cursor: pointer;
 }
