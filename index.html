@@ -3,7 +3,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="styles.css">
+        <!-- Font Awesome Setup -->
         <script src="https://kit.fontawesome.com/bf50564c9b.js" crossorigin="anonymous"></script>
         <title>Feed | LinkedIn</title>
     </head>
@@ -11,9 +12,12 @@
         <!-- CONTAINS THE NAV BAR-->
         <header>
         <nav id="navbar">
-            <div id="logo-div"><i class="fa-brands fa-linkedin" class="logo"></i></div>
             <div id="menu-list">
                 <ul>
+                    <!-- this is a special div since it contains the Logo -->
+                    <li class="menu-item">
+                        <i class="fa-brands fa-linkedin logo-item"></i>
+                    </li>
                     <li class="menu-item">
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <p class="nav-btn">Search</p>
@@ -49,7 +53,7 @@
                     </li><!-- has a dropdown menu-->
                     <li class="menu-item">
                         <a href="#">
-                            <p id="promo-text" class="link">Get hired faster. Try Premium free.</p>
+                            <p id="promo-text" class="link">get hired faster. try Premium free.</p>
                         </a>
                     </li>
                 </ul>
@@ -60,14 +64,19 @@
         <section id="user-section">
             <article>
                 <!--<img src="#" alt="user banner" id="banner">-->
-                <img src="img/user-picture.jpg" alt="profile picture" id="profile-pic">
+                <img src="img/user-picture.jpg" alt="profile photo of the user" id="profile-pic">
                 <h2 id="user-name">Thony Arrieche</h2>
-                <h3 id="user-job-title">Customer Service Expert | E-commerce Support</h3>
+                <h3 id="user-job-title">Web Developer | UX / UI Designer</h3>
             </article>
         </section>
         <!--SHOW MORE btn-->
-        <section id="show-more">
-            <button id="show-more-btn">Show more <i class="fa-solid fa-angle-down"></i></button>
+        <section id="show-more-section">
+            <span id="show-more-btn">
+                Show more <i class="fa-solid fa-chevron-down"></i>
+            </span>
+            <article id="more-info-div">
+                <!-- This is optional info displayed on click -->
+            </article>
         </section>
         <!-- START A POST SECTION-->
         <section id="search-section">
@@ -76,7 +85,7 @@
                     <img src="img/user-picture.jpg" alt="profile picture" id="search-bar-pic">
                     <input id="search-bar-post" type="text" placeholder="Start a post">
                 </div>
-                <ul id="search-bar-btns">
+                <ul id="search-bar-btns-list">
                     <a href="#" class="search-btn-link">
                         <li>
                             <i class="fa-solid fa-image search-btn-icon" id="photo-btn"></i>Photo
@@ -103,20 +112,30 @@
         <!--SORT BTN SECTION-->
         <section class="sort-btn-section">
             <hr class="sort-btn-row">
-            <p>Sort by: <button class="sort-btn">▼</button></p>
+            <div class="dropdown">
+                <span class="sort-btn">Sort by:</span>
+                <div class="sort-dropdown">
+                    <p>Top</p>
+                    <p>Recent</p>
+                </div>
+            </div>
         </section>
+        <!-- GENERAL FEED section and content -->
         <section id="general-feed">
             <article>
                 <div class="user-post-container">
                     <div class="profile-pic-container"><img src="img/profile-pic-1.png" alt="network-post" class="profile-pic-post"></div>
                     <div class="name-tile">
-                        <p class="user-name-post">Network user name</p>
-                        <p class="user-job-title">Network user job title</p>
+                        <p class="user-name-post">Abdul Rahman Kiran</p>
+                        <p class="user-job-title">Growth Marketer | Designer</p>
                         <p class="post-edit-time">2h ago</p>
                     </div>
-                    <div class="three-dot-btn"><a href="#"><i class="fa-solid fa-ellipsis"></i></a></div>
+                    <div class="three-dot-btn-container">
+                        <a href="#">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </a>
                     </div>
-                </div> <!-- END OF USER POST CONT-->
+                </div><!-- END OF USER POST CONT-->
                     <p>
                         The post itself
                         Lorem, ipsum dolor sit amet consectetur 
@@ -160,11 +179,11 @@
                 <div class="user-post-container">
                 <div class="profile-pic-container"><img src="img/profile-pic-2.png" alt="network-post" class="profile-pic-post"></div>
                 <div class="name-tile">
-                    <p class="user-name-post">Network user name</p>
-                    <p class="user-job-title">Network user job title</p>
+                    <p class="user-name-post">Jaka Milošević</p>
+                    <p class="user-job-title">Copywriter | Marketing Analyst</p>
                     <p class="post-edit-time">2h ago</p>
                 </div>
-                <div class="three-dot-btn"><a href="#"><i class="fa-solid fa-ellipsis"></i></a></div>
+                <div class="three-dot-btn-container"><a href="#"><i class="fa-solid fa-ellipsis"></i></a></div>
                 </div>
                 <p>
                     The post itself
@@ -205,13 +224,13 @@
                 </div>
             </article><article>
                 <div class="user-post-container">
-                    <div class="profile-pic-container"><img src="img/profile-pic-1.png" alt="network-post" class="profile-pic-post"></div>
+                    <div class="profile-pic-container"><img src="/img/profile-pic-3.png" alt="network-post" class="profile-pic-post"></div>
                     <div class="name-tile">
-                        <p class="user-name-post">Network user name</p>
-                        <p class="user-job-title">Network user job title</p>
+                        <p class="user-name-post">Nadia Macadamia</p>
+                        <p class="user-job-title">Sports Science | Publisher</p>
                         <p class="post-edit-time">2h ago</p>
                     </div>
-                    <div class="three-dot-btn"><a href="#"><i class="fa-solid fa-ellipsis"></i></a></div>
+                    <div class="three-dot-btn-container"><a href="#"><i class="fa-solid fa-ellipsis"></i></a></div>
                     </div>
                 </div> <!-- END OF USER POST CONTAINER-->
                     <p>
@@ -255,13 +274,13 @@
             </article>
             <article>
                 <div class="user-post-container">
-                    <div class="profile-pic-container"><img src="img/profile-pic-3.png" alt="network-post" class="profile-pic-post"></div>
+                    <div class="profile-pic-container"><img src="/img/profile-pic-4.png" alt="network-post" class="profile-pic-post"></div>
                     <div class="name-tile">
-                        <p class="user-name-post">Network user name</p>
-                        <p class="user-job-title">Network user job title</p>
+                        <p class="user-name-post">Lydia Antetokoumpo</p>
+                        <p class="user-job-title">HR Coordinator | Headhunters</p>
                         <p class="post-edit-time">2h ago</p>
                     </div>
-                    <div class="three-dot-btn"><a href="#"><i class="fa-solid fa-ellipsis"></i></a></div>
+                    <div class="three-dot-btn-container"><a href="#"><i class="fa-solid fa-ellipsis"></i></a></div>
                     </div>
                 </div> <!-- END OF USER POST CONT-->
                     <p>
@@ -305,13 +324,13 @@
             </article>
             <article>
                 <div class="user-post-container">
-                    <div class="profile-pic-container"><img src="img/profile-pic-4.jpg" alt="network-post" class="profile-pic-post"></div>
+                    <div class="profile-pic-container"><img src="/img/profile-pic-5.png" alt="network-post" class="profile-pic-post"></div>
                     <div class="name-tile">
-                        <p class="user-name-post">Network user name</p>
-                        <p class="user-job-title">Network user job title</p>
+                        <p class="user-name-post">Babatunde Merlo</p>
+                        <p class="user-job-title">Python Engineer | Data Science</p>
                         <p class="post-edit-time">2h ago</p>
                     </div>
-                    <div class="three-dot-btn"><a href="#"><i class="fa-solid fa-ellipsis"></i></a></div>
+                    <div class="three-dot-btn-container"><a href="#"><i class="fa-solid fa-ellipsis"></i></a></div>
                     </div>
                 </div> <!-- END OF USER POST CONT-->
                     <p>
