@@ -1,0 +1,417 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/*contains every menu item hidden and showing*/
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 52px;
+    background-color: #1d2226;
+    color:rgb(202, 201, 201);
+    display: flex; /*magic*/
+    justify-content: center;
+    align-items: center;
+    border-bottom: #333436 solid 1px;
+}
+
+#logo-div {
+    font-size: 38px;
+    color: rgb(202, 201, 201);
+    width: 8%;
+    max-width: 50px;
+/*    background-color: navajowhite;*/
+    text-align: center;
+    display: inline-flex;
+    margin-left: -20px;
+}
+#logo-div:hover {
+    color: #fff;
+}
+#menu-list {
+/*    background-color: bisque;*/
+    width: 90%;
+    max-width: 600px;
+    display: inline-flex;
+}
+
+#menu-list ul {
+    list-style-type: none;
+    display: inline-flex;
+    margin-left: -46px;
+}
+
+.menu-item {
+    margin-top: 24px;
+    font-size: 20px;
+    padding: 0 16px;
+    cursor: pointer;
+}
+.menu-item:hover {
+    color: #fff;
+}
+/*vertical line before WORK button*/
+.vl {
+    border-left: 1px solid #333436;
+    height: 56px;
+}
+
+#circular-portrait {
+    border-radius: 50%;
+    width: 24px;
+    height: auto;
+}
+
+#nav-search {
+    width: 0%; /*HIDDEN FOR VIEWPORT reasons*/
+    height: auto;
+    /*padding: 8px;*/
+}
+
+#search {
+display: none;
+}
+
+.nav-btn {
+ display: none;   
+}
+/*we could develop a class style for each of this 
+sections to avoid code stacking at least for
+user-section adn show-more*/
+.main-section {
+   stroke: none;
+}
+
+#user-section {
+    border-radius: 10px;
+    background-color: #1d2226;
+    /*using ps of bg to display as much as intended*/
+    background-image: url(https://images.unsplash.com/photo-1573080172019-72e10d006c2f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Ymx1ZSUyMHdhdmVzfGVufDB8fDB8fA%3D%3D&w=1000&q=80);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0 -242px; /*could this be the fix?*/
+    color: white;
+    margin-top: 64px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 16px 6px 16px;
+    width: 90%;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+#profile-pic {
+    border-radius: 50%;
+    border: 1px solid #000000;
+    width: 64px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#user-name, #user-job-title {
+    text-align: center;
+    font-size: smaller;
+}
+
+#user-name {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+#user-job-title {
+    margin-top: -8px;
+    font-size: 12px;
+    font-weight: lighter;
+    color: rgb(184, 184, 184)
+}
+
+/*SHOW MORE SECTION*/
+#show-more-btn {
+    border-radius: 8px;
+    display: block;
+    background-color: #000000;
+    color: #fff;
+    width: 90%;
+    margin-top: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 6px;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+#show-more-btn:hover {
+    background-color: #1d2226;
+}
+/*START A POST SECTION*/
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #fff;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #fff;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #fff;
+  }
+
+#search-section {
+    background-color: #1d2226;
+    width: 90%;
+    height: 118px;
+    margin-top: 9px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px;
+    max-width: 600px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+#search-bar-pic {
+    width: 52px;
+    border-radius: 60%;
+    margin-left: 8px;
+}
+/*PICTURE AND INPUT SEARCH STICKS TOGETHER INLINE*/
+#search-bar-post {
+    border-radius: 40px;
+    border: 1px solid rgb(131, 131, 131) ;
+    width: 82%;
+    max-width: 725px;
+    height: 22px;
+    padding: 12px;
+    background-color: inherit;
+    font-weight: bold;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+#search-bar-post:hover {
+    background-color: #686b6d;
+}
+
+#search-bar-btns {
+    color: #fff;
+    display: flex;
+    list-style-type: none;
+    margin-left: -40px; /*we need a fix to this for better practice*/
+    justify-content: space-between;
+    margin-top: 5px;
+}
+#search-bar-btns i { font-size: 18px;}
+
+#search-bar-btns li {
+    margin: 0 12px;
+    padding: 12px 0;
+}
+
+.search-btn-icon {
+    margin-right: 12px;
+}
+
+#search-bar-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-btn-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.search-btn-link:hover {
+    background-color: #686b6d;
+    border-radius: 2px;
+}
+
+#photo-btn {
+    color: #70b5f9;
+}
+
+#video-btn {
+    color: #7fc15e;
+}
+
+#audio-event-btn {
+    color: #e7a33e;
+}
+
+#write-article-btn {
+    color: #f5987e;
+}
+
+#promo-text {
+    font-size: 12px;
+    display: block;
+    margin-top: -6px;
+    margin-left: -16px;
+    text-align: center;
+    width: 100px;
+    line-height:18px;
+}
+
+.menu-item a {
+    color: goldenrod;
+}
+.menu-item a:hover {
+    color: rgb(253, 209, 96);
+}
+
+/*USERS POSTS*/
+#general-feed article {
+    color: white;
+    background-color: #1d2226;
+    width: 90%;
+    height: auto;
+    margin-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 18px;/*THIS MUST BE OPTIONAL FOR SOME POSTS OR ADS*/
+    max-width: 600px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+.user-post-container {
+    width: 100%;
+    display: flex; /*MAGIC!*/
+}
+
+.user-name-post {
+    font-weight: bold;
+    font-size: 16px; /*START transition to dynamic sizes*/
+}
+
+.profile-pic-post {
+    width: 52px;
+    margin-top: 4px;
+}
+
+.user-job-title, .post-edit-time {
+    color:#afb9be;
+    margin-top: -12px;
+    font-size: 12px;
+    
+}
+
+.name-tile {
+    margin-top: -10px;
+    margin-left: 6px;
+    width: 85%;
+}
+
+.three-dot-btn {
+    font-size: 20px;
+    width: 36px;
+    height: 34px;
+    margin-top: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.three-dot-btn a {
+    color: #fff;
+}
+
+.three-dot-btn:hover {
+    background-color: #686b6d;
+    border-radius: 50%;
+}
+
+.post-btn-container {
+    color: #fff;
+    display: flex;
+    list-style-type: none;
+    position: relative;
+    justify-content: space-evenly;
+/*    background-color: cadetblue;*/
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: -6px;
+}
+
+.post-btn { /*IT SHOULD BE CONTAINED WHITIN THE POST*/
+    border-radius: 2px;
+    width: 25%;
+    text-align: center;
+    padding: 6px 8px;
+}
+
+.post-btn i {
+    font-size: 20px;
+    margin-right: 4px;
+}
+
+.btn-inner-text {
+    font-size: 13px;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0;
+}
+
+.post-btn:hover {
+    background-color: #4e5052;
+}
+
+.horizontal-row {
+    border: 1px solid #333436;
+    width: 98%;
+    height: auto;
+}
+
+.img-post-container {
+    align-items: center;
+}
+
+.post-img {
+    width: 100%;
+    height: auto;
+}
+
+.sort-btn-section {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+    height: 30px;
+/*    background-color: #70b5f9;*/
+    font-size: 12px;
+    color: #686b6d;
+    margin-bottom: -6px;
+}
+.sort-btn-section p {
+    margin-top: 10px;
+    display: inline-flex;
+    margin-left: 16px;
+}
+
+.sort-btn-row {
+    display: inline-block;
+    width: 85%;
+    height: 0.1px;
+    max-width: 590px;
+    margin-left: 0px;
+    background-color: #1d2226;
+    border: none;
+}
+
+.sort-btn-section button {
+    background-color: transparent;
+    color: #686b6d;
+    text-align: center;
+    text-justify: auto;
+    padding: 2px;
+    margin-top: -3px;
+    cursor: pointer;
+}

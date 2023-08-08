@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="./css/styles.css">
         <!-- Font Awesome Setup -->
         <script src="https://kit.fontawesome.com/bf50564c9b.js" crossorigin="anonymous"></script>
         <title>Feed | LinkedIn</title>
@@ -13,14 +13,16 @@
         <header>
         <nav id="navbar">
             <div id="menu-list">
+                <!-- this is a special div since it contains the Logo -->
                 <ul>
-                    <!-- this is a special div since it contains the Logo -->
                     <li class="menu-item">
                         <i class="fa-brands fa-linkedin logo-item"></i>
                     </li>
                     <li class="menu-item">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <p class="nav-btn">Search</p>
+                        <div>
+                            <i class="fa-solid fa-magnifying-glass" id="main-search"></i>
+                            <input type="text" class="nav-search" placeholder="Search..."/>
+                        </div>
                     </li>
                     <li class="menu-item">
                         <i class="fa-solid fa-house-chimney"></i>
@@ -28,8 +30,8 @@
                     </li>
                     <li class="menu-item">
                         <i class="fa-sharp fa-solid fa-users"></i>
-        
-                        <p class="nav-btn">My Network</p>                    </li>
+                        <p class="nav-btn">Network</p>                    
+                    </li>
                     <li class="menu-item">
                         <i class="fa-solid fa-briefcase"></i>
                         <p class="nav-btn">Jobs</p>
@@ -43,13 +45,25 @@
                         <p class="nav-btn">Notifications</p>
                     </li>
                     <li class="menu-item">
-                        <div id="user-photo"><img id="circular-portrait" src="img/user-picture.jpg" alt="profile photo" id="profile-pic"></div> 
-                        <button id="dropdown-me" class="nav-btn"><p>Me ▼</p></button>
+                        <!-- make this img a dropdown menu bearer in large screen -->                       
+                        <div id="user-photo">
+                            <img id="circular-portrait" src="img/user-picture.jpg" alt="profile photo">
+                            <p class="nav-btn me-options-btn">Me</p>
+                            <div class="dropdown-content nav-btn">
+                                <p>User profile</p>
+                                <p>Settings</p>
+                                <p>Log out</p>
+                            </div>
+                        </div> 
                     </li>
                     <div class="vl"></div>
-                    <li class="menu-item">
+                    <li class="menu-item" id="business-btn">
                         <i class="fa-solid fa-table-cells"></i>
-                        <button class="nav-btn">Work ▼</button> <!--dropdown menu-->
+                        <p class="nav-btn">For Business</p> <!--dropdown menu-->
+                        <div class="dropdown-content nav-btn">
+                            <p>plans for business</p>
+                            <p>plans for business</p>
+                        </div>
                     </li><!-- has a dropdown menu-->
                     <li class="menu-item">
                         <a href="#">
@@ -183,7 +197,7 @@
                     <p class="user-job-title">Copywriter | Marketing Analyst</p>
                     <p class="post-edit-time">2h ago</p>
                 </div>
-                <div class="three-dot-btn-container"><a href="#"><i class="fa-solid fa-ellipsis"></i></a></div>
+                <div class="three-dot-btn-container"><a href="#" title="menu"><i class="fa-solid fa-ellipsis"></i></a></div>
                 </div>
                 <p>
                     The post itself
@@ -224,7 +238,7 @@
                 </div>
             </article><article>
                 <div class="user-post-container">
-                    <div class="profile-pic-container"><img src="/img/profile-pic-3.png" alt="network-post" class="profile-pic-post"></div>
+                    <div class="profile-pic-container"><img src="img/profile-pic-3.png" alt="network-post" class="profile-pic-post"></div>
                     <div class="name-tile">
                         <p class="user-name-post">Nadia Macadamia</p>
                         <p class="user-job-title">Sports Science | Publisher</p>
@@ -274,7 +288,7 @@
             </article>
             <article>
                 <div class="user-post-container">
-                    <div class="profile-pic-container"><img src="/img/profile-pic-4.png" alt="network-post" class="profile-pic-post"></div>
+                    <div class="profile-pic-container"><img src="img/profile-pic-4.png" alt="network-post" class="profile-pic-post"></div>
                     <div class="name-tile">
                         <p class="user-name-post">Lydia Antetokoumpo</p>
                         <p class="user-job-title">HR Coordinator | Headhunters</p>
@@ -324,7 +338,7 @@
             </article>
             <article>
                 <div class="user-post-container">
-                    <div class="profile-pic-container"><img src="/img/profile-pic-5.png" alt="network-post" class="profile-pic-post"></div>
+                    <div class="profile-pic-container"><img src="img/profile-pic-5.png" alt="network-post" class="profile-pic-post"></div>
                     <div class="name-tile">
                         <p class="user-name-post">Babatunde Merlo</p>
                         <p class="user-job-title">Python Engineer | Data Science</p>

@@ -1,0 +1,564 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*contains every menu item hidden and showing*/
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 52px;
+  background-color: #1d2226;
+  color: #afb9be;
+  border-bottom: #333436 solid 1px;
+  /* this style keeps the navbar items in the center
+  when theres any change in the vw we should address 
+  this style
+  */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1000;
+}
+
+#menu-list {
+  /*    background-color: bisque;*/
+  width: 90%;
+  max-width: 550px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#menu-list ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item {
+  font-size: 1.2rem;
+  padding: 0 14px;
+  padding-top: 16px;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  color: #fff;
+}
+
+/* this one is only for the Linkedin logo */
+.logo-item {
+  font-size: 38px;
+  color: #fff;
+  margin-top: -8px;
+}
+
+/*vertical line before WORK button*/
+.vl {
+  border-left: #333436 solid 1px;
+  height: 3rem;
+}
+
+#circular-portrait {
+  border-radius: 2rem;
+  width: 24px;
+  height: auto;
+}
+
+/* this text should be displayed on large screens! */
+.nav-btn, .nav-search {
+  display: none;
+}
+
+/* golden text placed to the right of the navbar */
+/* this section is probably badly placed need to attached it closer to the navbar menu code */
+#promo-text {
+  font-size: 12px;
+  text-transform: capitalize;
+  display: block;
+  margin-top: -6px;
+  margin-left: -16px;
+  text-align: center;
+  width: 100px;
+  line-height: 18px;
+}
+
+/* this class wont work if we make all the other items links too */
+.menu-item a {
+  color: #da962f;
+}
+.menu-item a:hover {
+  color: rgb(236, 193, 82);
+}
+
+/*we could develop a class style for each of this 
+sections to avoid code stacking at least for
+user-section adn show-more*/
+.main-section {
+  stroke: none;
+}
+
+#user-section {
+  border-radius: 0.5rem;
+  background-color: #1d2226;
+  /*using ps of bg to display as much as intended*/
+  background-image: url(https://images.unsplash.com/photo-1573080172019-72e10d006c2f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Ymx1ZSUyMHdhdmVzfGVufDB8fDB8fA%3D%3D&w=1000&q=80);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 0 -242px; /*could this be the fix?*/
+  color: #fff;
+  margin-top: 64px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 17px 6px 17px;
+  width: 90%;
+  max-width: 550px;
+}
+
+#profile-pic {
+  border-radius: 50%;
+  border: 1px solid #000000;
+  width: 64px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#user-name, #user-job-title {
+  text-align: center;
+  font-size: smaller;
+}
+
+#user-name {
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+#user-job-title {
+  margin-top: -8px;
+  font-size: 12px;
+  font-weight: lighter;
+  color: rgb(184, 184, 184);
+}
+
+/*SHOW MORE SECTION*/
+#show-more-section {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#show-more-btn {
+  width: 90%;
+  max-width: 550px;
+  border-radius: 0.25rem;
+  background-color: transparent;
+  color: #fff;
+  text-align: center;
+  margin-top: 8px;
+  padding: 5px 17px;
+}
+
+#show-more-btn:hover {
+  background-color: #1d2226;
+}
+
+/*START A POST SECTION*/
+::-webkit-input-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  opacity: 1; /* Firefox */
+  color: rgba(94, 92, 92, 0.7960784314);
+}
+::-moz-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  opacity: 1; /* Firefox */
+  color: rgba(94, 92, 92, 0.7960784314);
+}
+:-ms-input-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  opacity: 1; /* Firefox */
+  color: rgba(94, 92, 92, 0.7960784314);
+}
+::-ms-input-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  opacity: 1; /* Firefox */
+  color: rgba(94, 92, 92, 0.7960784314);
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  opacity: 1; /* Firefox */
+  color: rgba(94, 92, 92, 0.7960784314);
+}
+
+#search-section {
+  background-color: #1d2226;
+  max-width: 550px;
+  border-radius: 0.5rem;
+  height: 105px;
+  margin-top: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 12px 17px;
+  font-size: 0.8rem;
+}
+
+#search-bar-pic {
+  width: 48px;
+  border-radius: 2rem;
+  margin-left: 8px;
+  margin-top: 5px;
+}
+
+/*PICTURE AND INPUT SEARCH STICKS TOGETHER INLINE*/
+#search-bar-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#search-bar-post {
+  background-color: #1d2226;
+  border-radius: 2rem;
+  color: #fff;
+  border: 1px solid #686b6d;
+  width: 90%;
+  padding: 12px;
+  margin-left: 8px;
+  margin-top: 10px;
+}
+
+#search-bar-post:hover {
+  background-color: #686b6d;
+}
+
+#search-bar-btns-list {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  margin-left: -40px; /*we need a fix to this for better practice*/
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 6px;
+}
+#search-bar-btns-list .search-btn-icon {
+  font-size: 18px;
+  margin-right: 12px;
+}
+#search-bar-btns-list li {
+  margin: 0 15px;
+  padding: 15px 0;
+}
+
+.search-btn-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.search-btn-link:hover {
+  background-color: #686b6d;
+  border-radius: 0.25rem;
+}
+
+/* colors for each btn in the section */
+#photo-btn {
+  color: #70b5f9;
+}
+
+#video-btn {
+  color: #7fc15e;
+}
+
+#audio-event-btn {
+  color: #e7a33e;
+}
+
+#write-article-btn {
+  color: #f5987e;
+}
+
+/* hr and sort btn section style and positioning */
+.sort-btn-section {
+  margin: 0 auto;
+  max-width: 550px;
+  font-size: 11px;
+  color: #afb9be;
+  height: 40px;
+}
+.sort-btn-section span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-left: 16px;
+  background-color: transparent;
+  color: #afb9be;
+  text-align: center;
+  text-justify: auto;
+  padding: 4px;
+  cursor: pointer;
+  margin-top: -4px;
+}
+
+.sort-btn-row {
+  display: inline-block;
+  width: 88%;
+  height: 0.1rem;
+  max-width: 550px;
+  background-color: #1d2226;
+  border: none;
+}
+
+/* contains the dropdown options */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.sort-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #1d2226;
+  min-width: 90px;
+  padding: 0 5px;
+  z-index: 2;
+  font-size: 12px;
+  font-weight: bolder;
+}
+
+.dropdown:hover .sort-dropdown {
+  display: block;
+}
+
+.dropdown p {
+  padding: 5px 25px;
+}
+
+.dropdown p:hover {
+  background-color: #686b6d;
+  border-left: 3px solid #7fc15e;
+}
+
+/*USERS POSTS*/
+/* articles are each user post that present in the feed */
+#general-feed > article:first-child {
+  margin-top: -8px;
+}
+
+#general-feed article {
+  color: #fff;
+  background-color: #1d2226;
+  width: 90%;
+  max-width: 550px;
+  margin-top: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 17px; /*THIS MUST BE OPTIONAL FOR SOME POSTS OR ADS*/
+  font-size: 14px;
+  border-radius: 0.5rem;
+}
+
+.user-post-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; /*MAGIC!*/
+}
+
+.user-name-post {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.profile-pic-post {
+  width: 52px;
+  border-radius: 2rem;
+}
+
+.user-job-title, .post-edit-time {
+  color: #afb9be;
+  margin-top: -12px;
+  font-size: 12px;
+}
+
+.name-tile {
+  margin-top: -10px;
+  margin-left: 6px;
+  width: 85%;
+}
+
+.three-dot-btn-container {
+  font-size: 20px;
+  width: 36px;
+  height: 34px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.three-dot-btn-container a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.three-dot-btn-container:hover {
+  background-color: #686b6d;
+  border-radius: 2rem;
+}
+
+/* thick btn with Like, Comment and Repost options */
+.post-btn-container {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  position: relative;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  cursor: pointer;
+  margin-bottom: -10px;
+}
+
+.post-btn { /* THEY SHOULD BE CONTAINED WHITIN THE POST */
+  border-radius: 0.25rem;
+  width: 25%;
+  text-align: center;
+  padding: 6px 8px;
+}
+.post-btn i {
+  font-size: 20px;
+  margin-right: 4px;
+}
+.post-btn .btn-inner-text {
+  font-size: 13px;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0;
+}
+
+.post-btn:hover {
+  background-color: #4e5052;
+}
+
+.horizontal-row {
+  border: 1px solid #515253;
+  height: auto;
+}
+
+/* this is the img put as example in one of the posts */
+.post-img {
+  width: 100%;
+}
+
+/* For MEDIUM SIZE TABLETS*/
+/* FOR DESKTOPS SCREENS */
+@media only screen and (min-width: 768px) {
+  #user-section {
+    margin-top: 80px;
+  }
+  .nav-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 0.65rem;
+    text-transform: capitalize;
+  }
+  #menu-list {
+    /* background-color: bisque;*/
+    height: 70px;
+    width: 1200px;
+    max-width: 95%;
+    margin-left: 0px;
+    /* this style keeps the navbar items in the center
+    when theres any change in the vw we should address 
+    this style
+    */
+    display: -ms-grid;
+    display: grid;
+    place-content: center;
+  }
+  #menu-list ul {
+    list-style-type: none;
+    text-align: center;
+  }
+  #navbar {
+    position: fixed;
+    top: 0;
+    height: 70px;
+    background-color: #1d2226;
+    color: #afb9be;
+    border-bottom: #333436 solid 1px;
+    z-index: 1000;
+  }
+  .me-options-btn {
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+  .dropdown-content {
+    margin-top: -10px;
+    display: none;
+    position: absolute;
+    font-size: 10px;
+    min-width: 100px;
+    color: #afb9be;
+    background-color: #1d2226;
+  }
+  .dropdown-content p {
+    padding: 8px 16px;
+  }
+  .dropdown-content p:hover {
+    background-color: #686b6d;
+  }
+  #user-photo:hover .dropdown-content {
+    display: block;
+  }
+  #business-btn:hover .dropdown-content {
+    display: block;
+  }
+  #promo-text {
+    margin-top: 2px;
+  }
+  #main-search {
+    display: none;
+    width: 200px;
+  }
+  .nav-search {
+    display: inline-block;
+    width: 125px;
+    background: #c4c4c4 url("../assets/search.svg") no-repeat 8px;
+    padding: 8.5px 29.75px;
+    border-radius: 0.5rem;
+  }
+  .logo-item {
+    margin: 0;
+  }
+}
