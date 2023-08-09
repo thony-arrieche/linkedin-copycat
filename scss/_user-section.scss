@@ -1,0 +1,41 @@
+#user-section {
+    margin-top: 64px;
+    border-radius: $half-squared-borders;
+    background-color: $grey-background;
+    /*using ps of bg to display as much as intended*/
+    background-image: url(https://images.unsplash.com/photo-1573080172019-72e10d006c2f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Ymx1ZSUyMHdhdmVzfGVufDB8fDB8fA%3D%3D&w=1000&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -240px; /*could this be the fix?*/
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px $horizontal-padding 6px $horizontal-padding;
+    width: $mobile-section-width;
+    max-width: $mobile-max-width;
+}
+
+#profile-pic {
+    border-radius: $rounded-borders;
+    border: $dark-grey-border;
+    width: 64px;
+    display: block;
+    margin: 0 auto;
+}
+
+#user-name, #user-job-title {
+    text-align: center;
+    font-size: smaller;
+}
+
+#user-name {
+    color: $light-text;
+    font-size: 1.25rem;
+    margin-top: 20px;
+}
+
+#user-job-title {
+    margin-top: -8px;
+    font-size: 0.75rem;
+    font-weight: lighter;
+    color: rgb(184, 184, 184)
+}

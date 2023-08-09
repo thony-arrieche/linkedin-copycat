@@ -1,0 +1,85 @@
+/*contains every menu item hidden and showing*/
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: $mobile-navbar-height;
+    background-color: $grey-background;
+    color: $slightly-grey-text;
+    border-bottom: $dark-grey-border;
+    /* this style keeps the navbar items in the center
+    when theres any change in the vw we should address 
+    this style
+    */
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+
+#menu-list {
+    /*    background-color: bisque;*/
+        width: $mobile-section-width;
+        max-width: $mobile-max-width;
+        display: flex;
+        ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            margin: 0;
+            padding: 0;
+        }
+    }
+    
+    .menu-item {
+        font-size: 1.2rem;
+        padding: 0 14px;
+        padding-top: 16px;
+        cursor: pointer;
+    }
+    .menu-item:hover {
+        color: $light-background;
+    }
+    
+    /* this class wont work if we make all the other items links too */
+    .menu-item {
+        a {
+            color: $golden-promo-text;
+        }
+        a:hover {
+            color: rgb(236, 193, 82);
+        }
+    }
+    
+    /* this one is only for the Linkedin logo */
+    .logo-item {
+        font-size: 38px;
+        color: $light-text;
+        margin-top: -8px;
+    }
+    /*vertical line before WORK button*/
+    .vl {
+        border-left: $dark-grey-border;
+        height: 3rem;
+    }
+    
+    #circular-portrait {
+        border-radius: $rounded-borders;
+        width: 24px;
+        height: auto;
+    }
+    /* this text should be displayed on large screens! */
+    .nav-btn, .nav-search {
+        display: none;
+    }
+    /* golden text placed to the right of the navbar */
+    /* this section is probably badly placed need to attached it closer to the navbar menu code */
+    #promo-text {
+        font-size: 0.75rem;
+        text-transform: capitalize;
+        display: block;
+        margin-top: -6px;
+        margin-left: -12px;
+        text-align: center;
+        width: 100px;
+        line-height:1.25rem;
+    }

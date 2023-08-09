@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/styles.css">
         <!-- Font Awesome Setup -->
@@ -80,7 +80,7 @@
                 <!--<img src="#" alt="user banner" id="banner">-->
                 <img src="img/user-picture.jpg" alt="profile photo of the user" id="profile-pic">
                 <h2 id="user-name">Thony Arrieche</h2>
-                <h3 id="user-job-title">Web Developer | UX / UI Designer</h3>
+                <h3 id="user-job-title">Front End Developer</h3>
             </article>
         </section>
         <!--SHOW MORE btn-->
@@ -88,8 +88,13 @@
             <span id="show-more-btn">
                 Show more <i class="fa-solid fa-chevron-down"></i>
             </span>
-            <article id="more-info-div">
+            <article id="more-info-div" class="hideContent">
                 <!-- This is optional info displayed on click -->
+                <ul>
+                    <li>This section is very practical</li>
+                    <li>Contains info that is secondary</li>
+                    <li>Click the button again to hide</li>
+                </ul>
             </article>
         </section>
         <!-- START A POST SECTION-->
@@ -112,7 +117,7 @@
                     </a>
                     <a href="#" class="search-btn-link">
                         <li>
-                            <i class="fa-solid fa-calendar-week search-btn-icon" id="audio-event-btn"></i>Audio event
+                            <i class="fa-solid fa-calendar-week search-btn-icon" id="audio-event-btn"></i>Event
                         </li>
                     </a>
                     <a href="#" class="search-btn-link">
@@ -123,7 +128,7 @@
                 </ul>
             </article>
         </section>
-        <!--SORT BTN SECTION-->
+        <!-- SORT BTN SECTION -->
         <section class="sort-btn-section">
             <hr class="sort-btn-row">
             <div class="dropdown">
@@ -149,7 +154,9 @@
                             <i class="fa-solid fa-ellipsis"></i>
                         </a>
                     </div>
-                </div><!-- END OF USER POST CONT-->
+                </div>
+                <!-- END OF USER POST CONT-->
+                <div>
                     <p>
                         The post itself
                         Lorem, ipsum dolor sit amet consectetur 
@@ -160,7 +167,6 @@
                         Iusto, sed consequuntur.
                     </p>
                     <p>
-                        The post itself
                         Lorem, ipsum dolor sit amet consectetur 
                         adipisicing elit. Odit minima fugiat, 
                         cupiditate recusandae quisquam porro vel 
@@ -168,18 +174,28 @@
                         nulla. Dolor minima eius deleniti facilis. 
                         Iusto, sed consequuntur.
                     </p>
-                    <p>small icon impressions</p><p>comments tally</p>
+                </div>
+                <div class="post-stats">
+                    <div class="post-impressions">
+                        <img src="/assets/like-post.svg" alt="">
+                        <img src="/assets/love-post.svg" alt="">
+                        <img src="/assets/celebrate-post.svg" alt="">
+                    </div>
+                    <div class="post-comments-counter">
+                        <p>2 comments * 17 reposts</p>
+                    </div>
+                </div>
                     <hr class="horizontal-row">
                     <div class="post-btn-container">
                         <div class="post-btn">
                             <i class="fa-regular fa-thumbs-up"></i>
                             <p class="btn-inner-text">Like</p>
                         </div>
-                        <div class="post-btn">
+                        <div class="post-btn" title="Comment">
                             <i class="fa-regular fa-comment-dots"></i>
                             <p class="btn-inner-text">Comment</p>
                         </div>
-                        <div class="post-btn">
+                        <div class="post-btn" title="Repost">
                             <i class="fa-solid fa-retweet"></i>
                             <p class="btn-inner-text">Repost</p>
                         </div>
@@ -211,12 +227,16 @@
                 <div class="img-post-container">
                     <img src="img/post-img-1.jpeg" class="post-img" alt="post imag reference">
                 </div>
-                <p>
-                    The post itself
-                    Lorem, ipsum dolor sit amet consectetur 
-                    adipisicing elit. Odit minima fugiat
-                </p>
-                <p>small icon impressions♥</p><p>123 comments tally</p>
+                <div class="post-stats">
+                    <div class="post-impressions">
+                        <img src="/assets/like-post.svg" alt="">
+                        <img src="/assets/love-post.svg" alt="">
+                        <img src="/assets/celebrate-post.svg" alt="">
+                    </div>
+                    <div class="post-comments-counter">
+                        <p>2 comments * 17 reposts</p>
+                    </div>
+                </div>
                 <hr class="horizontal-row">
                 <div class="post-btn-container">
                     <div class="post-btn">
@@ -265,7 +285,16 @@
                         nulla. Dolor minima eius deleniti facilis. 
                         Iusto, sed consequuntur.
                     </p>
-                    <p>small icon impressions</p><p>comments tally</p>
+                    <div class="post-stats">
+                        <div class="post-impressions">
+                            <img src="/assets/like-post.svg" alt="">
+                            <img src="/assets/love-post.svg" alt="">
+                            <img src="/assets/celebrate-post.svg" alt="">
+                        </div>
+                        <div class="post-comments-counter">
+                            <p>2 comments * 17 reposts</p>
+                        </div>
+                    </div>
                     <hr class="horizontal-row">
                     <div class="post-btn-container">
                         <div class="post-btn">
@@ -290,7 +319,7 @@
                 <div class="user-post-container">
                     <div class="profile-pic-container"><img src="img/profile-pic-4.png" alt="network-post" class="profile-pic-post"></div>
                     <div class="name-tile">
-                        <p class="user-name-post">Lydia Antetokoumpo</p>
+                        <p class="user-name-post">Lydia Antetokounmpo</p>
                         <p class="user-job-title">HR Coordinator | Headhunters</p>
                         <p class="post-edit-time">2h ago</p>
                     </div>
@@ -315,7 +344,16 @@
                         nulla. Dolor minima eius deleniti facilis. 
                         Iusto, sed consequuntur.
                     </p>
-                    <p>small icon impressions</p><p>comments tally</p>
+                    <div class="post-stats">
+                        <div class="post-impressions">
+                            <img src="/assets/like-post.svg" alt="">
+                            <img src="/assets/love-post.svg" alt="">
+                            <img src="/assets/celebrate-post.svg" alt="">
+                        </div>
+                        <div class="post-comments-counter">
+                            <p>2 comments * 17 reposts</p>
+                        </div>
+                    </div>
                     <hr class="horizontal-row">
                     <div class="post-btn-container">
                         <div class="post-btn">
@@ -365,7 +403,16 @@
                         nulla. Dolor minima eius deleniti facilis. 
                         Iusto, sed consequuntur.
                     </p>
-                    <p>small icon impressions</p><p>comments tally</p>
+                    <div class="post-stats">
+                        <div class="post-impressions">
+                            <img src="/assets/like-post.svg" alt="">
+                            <img src="/assets/love-post.svg" alt="">
+                            <img src="/assets/celebrate-post.svg" alt="">
+                        </div>
+                        <div class="post-comments-counter">
+                            <p>2 comments * 17 reposts</p>
+                        </div>
+                    </div>
                     <hr class="horizontal-row">
                     <div class="post-btn-container">
                         <div class="post-btn">
@@ -394,5 +441,6 @@
         <footer></footer>
     </main>
 
+    <script src="./js/scripts.js"></script>
     </body>
 </html>

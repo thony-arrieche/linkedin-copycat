@@ -1,4 +1,4 @@
-@import "_global-variables";
+@import "_global-variables", "navbar", "user-section";
 
 body {
     padding: 0;
@@ -6,93 +6,13 @@ body {
     background-color: $dark-background;
     font-family: Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
-    box-sizing: border-box;
+    box-sizing:border-box;
 }
 
-/*contains every menu item hidden and showing*/
-#navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: $mobile-navbar-height;
-    background-color: $grey-background;
-    color: $slightly-grey-text;
-    border-bottom: $dark-grey-border;
-    /* this style keeps the navbar items in the center
-    when theres any change in the vw we should address 
-    this style
-    */
-    display: flex;
-    justify-content: center;
-    z-index: 1000;
-}
+// NAVBAR
 
-#menu-list {
-/*    background-color: bisque;*/
-    width: $mobile-section-width;
-    max-width: $mobile-max-width;
-    display: flex;
-    ul {
-        list-style-type: none;
-        display: flex;
-        justify-content: center;
-        margin: 0;
-        padding: 0;
-    }
-}
+// USER INFO
 
-.menu-item {
-    font-size: 1.2rem;
-    padding: 0 14px;
-    padding-top: 16px;
-    cursor: pointer;
-}
-.menu-item:hover {
-    color: $light-background;
-}
-
-/* this one is only for the Linkedin logo */
-.logo-item {
-    font-size: 38px;
-    color: $light-text;
-    margin-top: -8px;
-}
-/*vertical line before WORK button*/
-.vl {
-    border-left: $dark-grey-border;
-    height: 3rem;
-}
-
-#circular-portrait {
-    border-radius: $rounded-borders;
-    width: 24px;
-    height: auto;
-}
-/* this text should be displayed on large screens! */
-.nav-btn, .nav-search {
-    display: none;
-}
-/* golden text placed to the right of the navbar */
-/* this section is probably badly placed need to attached it closer to the navbar menu code */
-#promo-text {
-    font-size: 12px;
-    text-transform: capitalize;
-    display: block;
-    margin-top: -6px;
-    margin-left: -16px;
-    text-align: center;
-    width: 100px;
-    line-height:18px;
-}
-/* this class wont work if we make all the other items links too */
-.menu-item {
-    a {
-        color: $golden-promo-text;
-    }
-    a:hover {
-        color: rgb(236, 193, 82);
-    }
-}
 /*we could develop a class style for each of this 
 sections to avoid code stacking at least for
 user-section adn show-more*/
@@ -100,59 +20,25 @@ user-section adn show-more*/
    stroke: none;
 }
 
-#user-section {
-    border-radius: $half-squared-borders;
-    background-color: $grey-background;
-    /*using ps of bg to display as much as intended*/
-    background-image: url(https://images.unsplash.com/photo-1573080172019-72e10d006c2f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Ymx1ZSUyMHdhdmVzfGVufDB8fDB8fA%3D%3D&w=1000&q=80);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: 0 -242px; /*could this be the fix?*/
-    color: #fff;
-    margin-top: 64px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px $horizontal-padding 6px $horizontal-padding;
-    width: $mobile-section-width;
-    max-width: $mobile-max-width;
-}
-
-#profile-pic {
-    border-radius: 50%;
-    border: 1px solid #000000;
-    width: 64px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#user-name, #user-job-title {
-    text-align: center;
-    font-size: smaller;
-}
-
-#user-name {
-    font-size: 16px;
-    margin-top: 20px;
-}
-
-#user-job-title {
-    margin-top: -8px;
-    font-size: 12px;
-    font-weight: lighter;
-    color: rgb(184, 184, 184)
-}
+// MORE INFO SECTION
 
 /*SHOW MORE SECTION*/
 #show-more-section {
     width: 100%;
-    display: inline-flex;
-    justify-content: center;
+    display: grid;
+    place-items: center;
+    flex-direction: column;
     font-size: 12px;
     font-weight: bold;
     cursor: pointer;
 }
-
+// MORE INFO DIV
+.hideContent {
+    display: none;
+}
+#more-info-div {
+    color: #c7c7c7 !important;
+}
 #show-more-btn {
     width: $mobile-section-width;
     max-width: $mobile-max-width;
@@ -167,10 +53,12 @@ user-section adn show-more*/
 #show-more-btn:hover {
     background-color: $grey-background;
 }
-/*START A POST SECTION*/
+
+// START A POST
+/* START A POST SECTION */
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     opacity: 1; /* Firefox */
-    color: #5e5c5ccb;
+    color: $slightly-grey-text
   }
   
 #search-section {
@@ -181,15 +69,17 @@ user-section adn show-more*/
     margin-top: 8px;
     margin-left: auto;
     margin-right: auto;
-    padding: 12px $horizontal-padding;
+    padding: 4px $horizontal-padding;
+    padding-bottom: 10px;
     font-size: 0.8rem;
 }
 
 #search-bar-pic {
     width: 48px;
+    height: 45px;
     border-radius: $rounded-borders;
     margin-left: 8px;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 /*PICTURE AND INPUT SEARCH STICKS TOGETHER INLINE*/
 
@@ -205,7 +95,7 @@ user-section adn show-more*/
     color: $light-text;
     border: $default-border-style;
     width: $mobile-section-width;
-    padding: 12px;
+    padding: 16px;
     margin-left: 8px;
     margin-top: 10px;
 }
@@ -216,6 +106,7 @@ user-section adn show-more*/
 
 #search-bar-btns-list {
     color: $light-text;
+    font-weight: bolder;
     display: flex;
     list-style-type: none;
     margin-left: -40px; /*we need a fix to this for better practice*/
@@ -223,13 +114,13 @@ user-section adn show-more*/
     margin-top: 6px;
 
     .search-btn-icon { 
-        font-size: 18px;
+        font-size: 1.4rem;
         margin-right: 12px;
     }
 
     li {
-        margin: 0 15px;
-        padding: 15px 0;
+        margin: 0 8px;
+        padding: 12px 0px;
     }
 
 }
@@ -244,6 +135,7 @@ user-section adn show-more*/
     border-radius: $slightly-rounded-borders;
 }
 /* colors for each btn in the section */
+// map possibility
 #photo-btn {
     color: #70b5f9;
 }
@@ -274,7 +166,6 @@ user-section adn show-more*/
         background-color: transparent;
         color: $slightly-grey-text;
         text-align: center;
-        text-justify: auto;
         padding: 4px;
         cursor: pointer;
         margin-top: -4px;
@@ -288,6 +179,7 @@ user-section adn show-more*/
     max-width: $mobile-max-width;
     background-color: $grey-background;
     border: none;
+    margin-top: 15px;
 }
 /* contains the dropdown options */
 .dropdown {
@@ -426,6 +318,31 @@ user-section adn show-more*/
 /* this is the img put as example in one of the posts */
 .post-img {
     width: 100%;
+}
+
+.post-stats {
+    display: flex; 
+    justify-content: space-between;
+}
+.post-impressions {
+    margin-top: 10px;
+}
+
+.post-impressions img:nth-of-type(2) {
+    margin-left: -8px;
+}
+
+.post-impressions img:nth-of-type(3) {
+    margin-left: -8px;
+}
+
+.post-comments-counter {
+    display: flex;
+    align-items: center;
+    font-size: 0.72rem; 
+    font-weight: 400; 
+    margin: 0;
+    color: $slightly-grey-text;
 }
 
 /* For MEDIUM SIZE TABLETS*/
